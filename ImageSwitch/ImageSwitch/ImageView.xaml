@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ImageSwitch.ImageView">
+
+  <StackLayout>
+    <Label x:Name="DifferenceLabel"></Label>
+    <Grid>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="6*" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      
+        
+     <Grid Grid.Column="1" x:Name="imageGrid">
+        <Image Source="linux_background.png" x:Name="BackgroundImage" />
+        <Image Source="linux_foreground.png" x:Name="MovingImage"/>
+        <Image Source="linux_full.png" x:Name="FullImage" />
+      </Grid>
+      <BoxView Grid.Column="2" BackgroundColor="Green" />
+    <BoxView Grid.Column="0" BackgroundColor="Green" />
+    </Grid>
+    
+    <Button x:Name="StartButton" Text="GO" ></Button>
+  
+    <Button x:Name="HideButton" Text="Hide" ></Button>
+    
+    <Button x:Name="matchButton" Text="Match" ></Button>
+  </StackLayout>
+</ContentPage>
